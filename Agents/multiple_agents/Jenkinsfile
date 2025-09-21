@@ -1,25 +1,24 @@
 pipeline {
-    agent none 
+    agent none
 
     stages {
         stage('Node Agent') {
             agent {
-                docker {image 'node:20-alpine'}
+                docker { image 'node:20-alpine' }
             }
             steps {
-                echo "This is Node stage..."
+                echo ' This is Node stage... '
                 sh 'echo "Running dummy Node.js task"'
                 sh 'node -v'
             }
         }
 
-
         stage('Python Agent ') {
             agent {
-                docker { image : 'python:3.11-alpine'}
+                docker { image 'python:3.11-alpine' }
             }
-             steps {
-                echo "This is Python stage..."
+            steps {
+                echo 'This is Python stage...'
                 sh 'echo "Running dummy Python task"'
                 sh 'python --version'
             }
