@@ -2,16 +2,10 @@ pipeline {
 
     agent any
 
-    Enviroment 
+    Stages {
 
-    Stages{
-
-       stage('build') {
-
-        sh '''
+       stage('Greetings') {
             echo 'hey from harshit Bisht'
-           '''
-
        } 
     }
 }
