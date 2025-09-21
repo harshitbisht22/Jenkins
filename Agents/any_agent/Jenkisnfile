@@ -1,0 +1,17 @@
+pipeline {
+
+    agent any
+
+    Enviroment 
+
+    Stages{
+
+       stage('build') {
+
+        sh '''
+            echo 'hey from harshit Bisht'
+           '''
+
+       } 
+    }
+}
